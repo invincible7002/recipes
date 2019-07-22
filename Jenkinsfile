@@ -22,6 +22,15 @@ pipeline {
             }
         }
        
+         stage ('UnitTest') {
+            steps {
+                echo 'UnitTest'
+               
+            }
+}
+        
+        
+        
  stage ('Deploy') {
             steps {
                 dir("/home/durgeshgaur/HelloWorld/recipes") {
