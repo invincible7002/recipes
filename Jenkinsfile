@@ -25,7 +25,7 @@ pipeline {
          stage ('UnitTest') {
             steps {
                 dir("/home/durgeshgaur/HelloWorld/recipes") {
-               sh 'mvn sonar:sonar   -Dsonar.projectKey=test   -Dsonar.host.url=http://localhost:9000   -Dsonar.login=150b2835b468febe59d743326b59f7538a63d4a8'
+               sh 'mvn sonar:sonar   -Dsonar.projectKey=test   -Dsonar.host.url=http://localhost:9000   -Dsonar.login=2c3b0a7284cbe38b6e92924b0bbbce7d83b111d8'
                 }
             }
          
