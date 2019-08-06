@@ -25,7 +25,7 @@ pipeline {
          stage ('UnitTest') {
             steps {
                 dir("/home/durgeshgaur/HelloWorld/recipes") {
-               sh 'mvn deploy:deploy-file -DgroupId=com.somecompany -DartifactId=project -Dversion=1.0.0-SNAPSHOT -DgeneratePom=true -Dpackaging=jar -DrepositoryId=nexus -Durl=http://localhost:8081/repository/UPES -Dfile=target/recipes-0.0.1-SNAPSHOT.jar'
+               sh 'mvn sonar:sonar   -Dsonar.projectKey=test   -Dsonar.host.url=http://localhost:9000   -Dsonar.login=150b2835b468febe59d743326b59f7538a63d4a8'
                 }
             }
          
