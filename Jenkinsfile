@@ -15,7 +15,7 @@ pipeline {
         stage ('Build') {
             steps {
                 dir("/home/durgeshgaur/HelloWorld/recipes") {
-                sh 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64'    
+                   
                 sh 'mvn -Dmaven.test.failure.ignore=true -U clean install'
                 }
                
