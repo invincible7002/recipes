@@ -31,15 +31,7 @@ pipeline {
          
 }
         
-      stage ('Push') {
-            steps {
-                dir("/home/durgeshgaur/HelloWorld/recipes") {
-               sh 'mvn deploy:deploy-file -DgroupId=com.somecompany -DartifactId=project -Dversion=1.0.0-SNAPSHOT -DgeneratePom=true -Dpackaging=jar -Drepositor    yId=nexus -Durl=http://localhost:8081/repository/maven-snapshots -Dfile=target/recipes-0.0.1-SNAPSHOT.jar'
-                }
-            }
-         
-}
-        
+  
         
         
         
