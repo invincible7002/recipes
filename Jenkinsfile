@@ -14,7 +14,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                dir("/home/ec2-user/HelloWorld/recipes") {
+                dir("/home/ec2-user/HelloWorld/recipes/recipes") {
                    
                 sh 'mvn -Dmaven.test.failure.ignore=true -U clean install'
                 }
@@ -31,7 +31,7 @@ pipeline {
         
  stage ('Deploy') {
             steps {
-                dir("/home/ec2-user/HelloWorld/recipes") {
+                dir("/home/ec2-user/HelloWorld/recipes/recipes") {
                 sh 'mvn spring-boot:run'
                 }
                
